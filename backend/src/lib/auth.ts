@@ -3,6 +3,8 @@ import { bearer } from "better-auth/plugins";
 import User from "../models/users";
 import PatientProfile from "../models/patientProfile";
 
+
+
 interface RegisterData {
   email: string;
   password: string;
