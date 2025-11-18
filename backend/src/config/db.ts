@@ -1,20 +1,12 @@
-// src/config/db.ts
-import { MongoClient, ServerApiVersion } from "mongodb";
-import * as dotenv from 'dotenv';
-dotenv.config();
+import { MongoClient, ServerApiVersion } from "mongodb"
+import { env } from "./env"
 
-const uri = process.env.MONGODB_URI;
-
-if (!uri) {
-  throw new Error("Please define the MONGODB_URI environment variable");
-}
-
-export const client = new MongoClient(uri,  {
-        serverApi: {
-            version: ServerApiVersion.v1,
-            strict: true,
-            deprecationErrors: true,
-        }
+export const client = new MongoClient(env.MONGODB_URI, {
+    serverApi: {
+        version: ServerApiVersion.v1,
+        strict: true,
+        deprecationErrors: true,
     }
+}
 );
 
