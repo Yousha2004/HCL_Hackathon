@@ -31,12 +31,12 @@ The architecture separates the frontend, backend, and data layers to ensure scal
 
 | Layer | Technology | Role in Project |
 | :--- | :--- | :--- |
-| **Frontend** | **React.js / Next.js** | Building a responsive, accessible user interface. |
-| **Styling** | **CSS Modules / Sass** | Structured, maintainable styling. |
+| **Frontend** | **React.js ** | Building a responsive, accessible user interface. |
+| **Styling** | **CSS Modules ** | Structured, maintainable styling. |
 | **Backend / API** | **Node.js with Express.js** | Robust backend runtime for building the RESTful API. |
 | **Database** | **Cloud-based NoSQL** (e.g., MongoDB) | Scalable data storage for patient profiles, sessions, and tracking data. |
 | **Authentication** | **JWT / NextAuth.js (Auth.js)** | Secure session management and **Role-Based Access Control (RBAC)**. |
-| **Deployment** | **Vercel / AWS / GCP** | Cloud platforms for deploying frontend and backend applications. |
+| **Deployment** | **Vercel ** | Cloud platforms for deploying frontend and backend applications. |
 
 ## 🏛️ Architecture & DevOps Considerations
 
@@ -45,7 +45,6 @@ The architecture separates the frontend, backend, and data layers to ensure scal
   * **Scalable Design:** Clear separation of Frontend, Backend (API), and Data layers.
   * **Secure Data Flow:** Implementation of secure communication protocols between frontend and backend.
   * **RBAC Enforcement:** Strict implementation of **Role-Based Access Control (Patient vs. Provider)** at the API level.
-  * **HIPAA Principles:** Implement basic compliance measures, including data encryption and access controls for sensitive information.
   * **Error Handling:** Proper error handling and logging mechanisms.
   * **Configuration:** Use of environment variables for sensitive settings.
 
