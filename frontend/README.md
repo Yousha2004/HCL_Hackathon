@@ -1,4 +1,4 @@
-# HealMe
+# HealthHub
 
 Health and Wellness tracker application frontend.
 
