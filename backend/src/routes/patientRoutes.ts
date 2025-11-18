@@ -5,10 +5,10 @@ import {
   updatePatientProfile,
   logDailyEntry,
   completeReminder,
-} from "../controllers/patientController.js";
+} from "../controllers/patientController";
 
-import { rbacMiddleware } from "../middlewares/rbacMiddleware.js";
-import { authMiddleware } from "../middlewares/authMiddleware.js";
+import { rbacMiddleware } from "../middlewares/rbacMiddleware";
+import { authMiddleware } from "../middlewares/authMiddleware";
 
 const router = Router();
 

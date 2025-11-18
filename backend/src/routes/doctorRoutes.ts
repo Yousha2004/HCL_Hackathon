@@ -1,12 +1,12 @@
 import { Router } from "express";
-import { authMiddleware } from "../middlewares/authMiddleware.js";
-import { rbacMiddleware } from "../middlewares/rbacMiddleware.js";
+import { authMiddleware } from "../middlewares/authMiddleware";
+import { rbacMiddleware } from "../middlewares/rbacMiddleware";
 import {
   getDoctorDashboard,
   getPatientDetails,
   createPatientGoal,
   createPreventiveReminder,
-} from "../controllers/doctorController.js";
+} from "../controllers/doctorController";
 
 const router = Router();
 

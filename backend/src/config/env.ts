@@ -5,7 +5,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 export const env = {
-  PORT: process.env.PORT || 3000,
+  PORT: process.env.PORT || 8000,
   NODE_ENV: process.env.NODE_ENV,
   MONGODB_URI: process.env.MONGODB_URI as string,
   DB_NAME: process.env.DB_NAME || "hackathon_db",

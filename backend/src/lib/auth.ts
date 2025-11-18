@@ -1,9 +1,9 @@
 import { betterAuth } from "better-auth";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
-import { client } from "../config/db.js"; // Ensure this exports a MongoClient
+import { client } from "../config/db"; 
 import { bearer } from "better-auth/plugins";
-import User from "../models/users.js";
-import PatientProfile from "../models/patientProfile.js";
+import User from "../models/users";
+import PatientProfile from "../models/patientProfile";
 
 const db = client.db(); // Uses the default DB name from your connection string
 
