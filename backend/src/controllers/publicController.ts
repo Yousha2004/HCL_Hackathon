@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import HealthTip from '../models/HealthTips';
+import HealthTip from '../models/HealthTips.js';
 
 /**
  * @desc    Get a random health tip

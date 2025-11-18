@@ -1,6 +1,6 @@
 import { betterAuth } from "better-auth";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
-import { client }  from "../config/db";
+import { client }  from "../config/db.js";
 
 const db = client.db();
 
