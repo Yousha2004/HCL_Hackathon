@@ -8,10 +8,10 @@ import { connectMongoose } from "./models/mongoose.js";
 const app = express();
 const port = 8000;
 
-// Middleware setup
+// Middleware
 app.use(
   cors({
-    origin: "http://localhost:3000", // Ensure this matches your frontend URL
+    origin: "http://localhost:3000",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
@@ -19,15 +19,18 @@ app.use(
 
 app.use(express.json());
 
-// Better Auth Handler
-app.all("/api/auth/*", toNodeHandler(auth));
+// --- FIX: Route Syntax for Express 5 ---
+// The (.*) explicitly tells Express to match anything after /api/auth/
+app.all("/api/auth/(.*)", toNodeHandler(auth));
 
 app.use('/api/public', publicRoutes);
 
-// --- SERVER STARTUP FUNCTION ---
 const startServer = async () => {
   try {
+    // 1. Connect Mongoose (for your application models)
     await connectMongoose();
+    
+    // 2. Start Server
     app.listen(port, () => {
       console.log(`🚀 Better Auth app listening on port ${port}`);
     });
@@ -37,5 +40,4 @@ const startServer = async () => {
   }
 };
 
-// Execute startup
 startServer();

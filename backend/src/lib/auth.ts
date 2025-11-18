@@ -1,9 +1,11 @@
 import { betterAuth } from "better-auth";
+import { mongodbAdapter } from "better-auth/adapters/mongodb";
+import { client } from "../config/db.js"; // Ensure this exports a MongoClient
 import { bearer } from "better-auth/plugins";
 import User from "../models/users.js";
 import PatientProfile from "../models/patientProfile.js";
 
-
+const db = client.db(); // Uses the default DB name from your connection string
 
 interface RegisterData {
   email: string;
@@ -17,14 +19,17 @@ interface LoginData {
   email: string;
   password: string;
 }
+
 export const auth = betterAuth({
   plugins: [bearer()],
-  database: {},
-
-  emailAndPassword: {
-    enabled: true,
-
-    async register(data: RegisterData) {
+  database: mongodbAdapter(db),
+  
+  // You likely need this enabled to actually log people in
+  emailAndPassword: {  
+    enabled: true 
+  },
+  
+  async register(data: RegisterData) {
       const existingUser = await User.findOne({ email: data.email });
       if (existingUser) throw new Error("User already exists");
 
@@ -72,5 +77,8 @@ export const auth = betterAuth({
       }
       return false;
     },
-  },
+  // Add social providers here if needed
+  // socialProviders: { ... } 
 });
+
+
