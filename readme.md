@@ -36,7 +36,7 @@ The architecture separates the frontend, backend, and data layers to ensure scal
 | **Backend / API** | **Node.js with Express.js** | Robust backend runtime for building the RESTful API. |
 | **Database** | MongoDB | Scalable data storage for patient profiles, sessions, and tracking data. |
 | **Authentication** | **Better-Auth.js** | Secure session management and **Role-Based Access Control (RBAC)**. |
-| **Deployment** | **Vercel ** | Cloud platforms for deploying frontend and backend applications. |
+| **Deployment** | **Vercel** | Cloud platforms for deploying frontend and backend applications. |
 
 ## 🏛️ Architecture & DevOps Considerations
 
