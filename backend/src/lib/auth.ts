@@ -1,7 +1,12 @@
 import { betterAuth } from "better-auth";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
-import { client } from "../db/index.ts"; // your mongodb client
+import { client }  from "../config/db";
+
+const db = client.db();
 
 export const auth = betterAuth({
-    database: mongodbAdapter(client),
+  database: mongodbAdapter(db, {
+    // Optional: if you don't provide a client, database transactions won't be enabled.
+    client
+  }),
 });
