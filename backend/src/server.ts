@@ -23,7 +23,7 @@ app.use(express.json());
 
 // --- FIX: Route Syntax for Express 5 ---
 // The (.*) explicitly tells Express to match anything after /api/auth/
-app.all("/api/auth/(.*)", toNodeHandler(auth));
+app.all('/api/auth/{*any}', toNodeHandler(auth));
 
 app.use('/api/public', publicRoutes);
 
