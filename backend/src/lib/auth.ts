@@ -1,7 +1,7 @@
 import { betterAuth } from "better-auth";
 import { bearer } from "better-auth/plugins";
-import User from "../models/users";
-import PatientProfile from "../models/patientProfile";
+import User from "../models/users.js";
+import PatientProfile from "../models/patientProfile.js";
 
 
 

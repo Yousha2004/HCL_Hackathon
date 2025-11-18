@@ -44,6 +44,6 @@ const DailyEntrySchema = new Schema<IDailyEntry>({
 });
 DailyEntrySchema.index({ user: 1, date: 1 }, { unique: true });
 
-// Create and export model
-const WellnessEntry = model<IDailyEntry>('WellnessEntry', DailyEntrySchema);
-export default WellnessEntry;
+
+const DailyEntry = model<IDailyEntry>('DailyEntry', DailyEntrySchema);
+export default DailyEntry;

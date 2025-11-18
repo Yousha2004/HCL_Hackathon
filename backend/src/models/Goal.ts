@@ -44,5 +44,5 @@ const GoalSchema = new Schema<IGoal>({
 });
 
 GoalSchema.index({ user: 1, isActive: 1 });
-const WellnessGoal = model<IGoal>('WellnessGoal', GoalSchema);
-export default WellnessGoal;
+const Goal = model<IGoal>('Goal', GoalSchema);
+export default Goal;
