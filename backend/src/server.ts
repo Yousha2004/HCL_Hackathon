@@ -25,6 +25,8 @@ app.all("/api/auth/*", toNodeHandler(auth));
 // Application Routes
 app.use('/api/routes', router);
 
+app.use('/api/public', publicRoutes);
+
 // --- SERVER STARTUP FUNCTION ---
 const startServer = async () => {
   try {
