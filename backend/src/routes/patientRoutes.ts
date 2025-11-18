@@ -8,10 +8,13 @@ import {
 } from "../controllers/patientController.js";
 
 import { rbacMiddleware } from "../middlewares/rbacMiddleware.js";
+import { authMiddleware } from "../middlewares/authMiddleware.js";
 
 const router = Router();
 
 router.use(rbacMiddleware(["patient"]));
+
+router.use(authMiddleware);
 
 router.get("/dashboard", getPatientDashboard);
 

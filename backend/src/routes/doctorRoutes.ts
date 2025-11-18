@@ -12,7 +12,7 @@ const router = Router();
 
 router.use(rbacMiddleware(["provider"]));
 
-
+router.use(authMiddleware);
 
 router.get("/dashboard", getDoctorDashboard);
 

@@ -27,9 +27,9 @@ app.all("/api/auth/(.*)", toNodeHandler(auth));
 
 app.use('/api/public', publicRoutes);
 
-app.use('/api/auth/doctor',doctorRoute);
+app.use('/api/doctor',doctorRoute);
 
-app.use('/api/auth/patient',patientRoute);
+app.use('/api/patient',patientRoute);
 
 const startServer = async () => {
   try {
