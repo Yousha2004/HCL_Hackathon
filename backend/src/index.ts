@@ -2,7 +2,7 @@ import express from 'express';
 import cors from "cors";
 import router from './routes';
 import { env } from './config/env';
-import { connectMongoose } from './models/mongoose';
+import { getClient } from './config/db';
 import { toNodeHandler } from 'better-auth/node';
 import { auth } from './lib/auth';
 
@@ -23,7 +23,7 @@ app.use('/api/v1', router);
 
 const startServer = async () => {
     try {
-        await connectMongoose();
+        await getClient();
         app.listen(env.PORT, () =>
             console.log('Server is up and running!')
         );
@@ -34,7 +34,3 @@ const startServer = async () => {
 };
 
 startServer();
-// Start the server
-app.listen(env.PORT, () =>
-    console.log('Server is up and running!')
-);
