@@ -9,6 +9,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "better-auth": "^1.3.34",
     "dotenv": "^17.2.3",
     "mongoose": "^8.20.0",
