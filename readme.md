@@ -31,8 +31,8 @@ The architecture separates the frontend, backend, and data layers to ensure scal
 
 | Layer | Technology | Role in Project |
 | :--- | :--- | :--- |
-| **Frontend** | **React.js ** | Building a responsive, accessible user interface. |
-| **Styling** | **CSS Modules ** | Structured, maintainable styling. |
+| **Frontend** | React.js | Building a responsive, accessible user interface. |
+| **Styling** | CSS Modules | Structured, maintainable styling. |
 | **Backend / API** | **Node.js with Express.js** | Robust backend runtime for building the RESTful API. |
 | **Database** | **Cloud-based NoSQL** (e.g., MongoDB) | Scalable data storage for patient profiles, sessions, and tracking data. |
 | **Authentication** | **JWT / NextAuth.js (Auth.js)** | Secure session management and **Role-Based Access Control (RBAC)**. |
