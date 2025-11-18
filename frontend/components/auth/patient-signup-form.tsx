@@ -29,8 +29,24 @@ export default function PatientSignupForm({ onBack }: PatientSignupFormProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    // Add signup logic here
-    setTimeout(() => setIsLoading(false), 2000);
+    try {
+      // Import here to avoid SSR issues
+      const { authClient } = await import('@/lib/auth');
+      await authClient.signUp.email({
+        email: formData.email,
+        password: formData.password,
+        name: formData.fullName,
+        role: 'patient',
+        consent: true,
+        phoneNumber: formData.phoneNumber,
+        address: formData.address,
+        dateOfBirth: formData.dateOfBirth,
+      });
+      // Optionally redirect or show success
+    } catch (err) {
+      // Optionally handle error
+    }
+    setIsLoading(false);
   };
 
   return (

@@ -13,6 +13,12 @@ interface RegisterData {
   name: string;
   role?: string;
   consent?: boolean;
+  phoneNumber?: string;
+  address?: string;
+  dateOfBirth?: string;
+  licenseNumber?: string;
+  specialization?: string;
+  hospitalAffiliation?: string;
 }
 
 interface LoginData {
@@ -33,12 +39,19 @@ export const auth = betterAuth({
       const existingUser = await User.findOne({ email: data.email });
       if (existingUser) throw new Error("User already exists");
 
+
       const newUser = await User.create({
         name: data.name,
         email: data.email,
         password: data.password,
         role: (data as any).role || "patient",
         consent: (data as any).consent || false,
+        phoneNumber: data.phoneNumber || '',
+        address: data.address || '',
+        dateOfBirth: data.dateOfBirth || '',
+        licenseNumber: data.licenseNumber || '',
+        specialization: data.specialization || '',
+        hospitalAffiliation: data.hospitalAffiliation || '',
       });
 
       if (newUser.role === "patient") {

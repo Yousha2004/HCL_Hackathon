@@ -5,8 +5,14 @@ export interface IUser extends Document {
   name: string;
   email: string;
   password: string;
-  role: 'patient' | 'doctor';
+  role: 'patient' | 'provider';
   consent: boolean;
+  phoneNumber?: string;
+  address?: string;
+  dateOfBirth?: string;
+  licenseNumber?: string;
+  specialization?: string;
+  hospitalAffiliation?: string;
   createdAt: Date;
   updatedAt: Date;
   comparePassword(candidatePassword: string): Promise<boolean>;
@@ -43,6 +49,30 @@ const UserSchema = new Schema<IUser>(
         validator: (v: boolean) => v === true,
         message: 'Consent must be given.'
       }
+    },
+    phoneNumber: {
+      type: String,
+      default: '',
+    },
+    address: {
+      type: String,
+      default: '',
+    },
+    dateOfBirth: {
+      type: String,
+      default: '',
+    },
+    licenseNumber: {
+      type: String,
+      default: '',
+    },
+    specialization: {
+      type: String,
+      default: '',
+    },
+    hospitalAffiliation: {
+      type: String,
+      default: '',
     },
   },
   {
