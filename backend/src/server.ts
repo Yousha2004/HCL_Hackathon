@@ -20,7 +20,7 @@ app.use(
 app.use(express.json());
 
 // Better Auth Handler
-app.all("/api/auth/*", toNodeHandler(auth));
+app.all('/api/auth/{*any}', toNodeHandler(auth));
 
 app.use('/api/public', publicRoutes);
 
