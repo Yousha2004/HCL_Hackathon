@@ -1,0 +1,8 @@
+{
+  "name": "hcl-hackathon",
+  "private": true,
+  "packageManager": "pnpm@10.20.0",
+  "engines": {
+    "node": ">=18"
+  }
+}
