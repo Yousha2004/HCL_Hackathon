@@ -31,12 +31,12 @@ The architecture separates the frontend, backend, and data layers to ensure scal
 
 | Layer | Technology | Role in Project |
 | :--- | :--- | :--- |
-| **Frontend** | React.js | Building a responsive, accessible user interface. |
-| **Styling** | CSS Modules | Structured, maintainable styling. |
+| **Frontend** | **Next.js** | Building a responsive, accessible user interface. |
+| **Styling** | **Tailwind Css** | Structured, maintainable styling. |
 | **Backend / API** | **Node.js with Express.js** | Robust backend runtime for building the RESTful API. |
-| **Database** | **Cloud-based NoSQL** (e.g., MongoDB) | Scalable data storage for patient profiles, sessions, and tracking data. |
-| **Authentication** | **JWT** | Secure session management and **Role-Based Access Control (RBAC)**. |
-| **Deployment** | **Vercel** | Cloud platforms for deploying frontend and backend applications. |
+| **Database** | MongoDB | Scalable data storage for patient profiles, sessions, and tracking data. |
+| **Authentication** | **Better-Auth.js** | Secure session management and **Role-Based Access Control (RBAC)**. |
+| **Deployment** | **Vercel ** | Cloud platforms for deploying frontend and backend applications. |
 
 ## 🏛️ Architecture & DevOps Considerations
 
@@ -60,31 +60,31 @@ The architecture separates the frontend, backend, and data layers to ensure scal
 ### Prerequisites
 
   * Node.js (LTS version)
-  * Access to a cloud NoSQL database instance (e.g., a MongoDB Atlas connection string).
+  * MongoDB Atlas connection string.
 
 ### Installation & Run
 
 1.  **Clone the Repository:**
 
     ```bash
-    git clone [YOUR_REPO_URL]
-    cd healthcare-wellness-portal
+    git clone https://github.com/Yousha2004/HCL_Hackathon
+    cd HCL_Hackathon
     ```
 
 2.  **Backend Setup (API):**
 
     ```bash
     cd backend
-    npm install
+    pnpm install
     # Create .env file with PORT, MONGO_URI, and JWT_SECRET
-    npm start
+    pnpm start
     ```
 
 3.  **Frontend Setup (UI):**
 
     ```bash
     cd ../frontend
-    npm install
+    pnpm install
     # Ensure API_BASE_URL is set in .env.local
-    npm run dev
+    pnpm run dev
     ```
