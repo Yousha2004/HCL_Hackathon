@@ -10,8 +10,6 @@ import {
 
 const router = Router();
 
-router.use(authMiddleware);
-
 router.use(rbacMiddleware(["provider"]));
 
 

@@ -4,6 +4,8 @@ import { toNodeHandler } from "better-auth/node";
 import { auth } from "./lib/auth.js";
 import publicRoutes from "./routes/publicRoutes.js";
 import { connectMongoose } from "./models/mongoose.js";
+import doctorRoute  from "./routes/doctorRoutes.js";
+import patientRoute from "./routes/patientRoutes.js";
 
 const app = express();
 const port = 8000;
@@ -24,6 +26,10 @@ app.use(express.json());
 app.all("/api/auth/(.*)", toNodeHandler(auth));
 
 app.use('/api/public', publicRoutes);
+
+app.use('/api/auth/doctor',doctorRoute);
+
+app.use('/api/auth/patient',patientRoute);
 
 const startServer = async () => {
   try {
