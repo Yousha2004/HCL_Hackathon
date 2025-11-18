@@ -15,13 +15,13 @@ This Minimum Viable Product (MVP) focuses on delivering a coherent, limited user
 
 | \# | Role | Feature | Description |
 | :--- | :--- | :--- | :--- |
-| **1.** | Public / All | **Secure Authentication System** | Implement login/registration for both Patients and Providers. Features **JWT-based session management** with expiration and **Password Hashing**. |
+| **1.** | Public / All | **Secure Authentication System** | **JWT-based session management** with expiration and **Password Hashing**. |
 | **2.** | Patient | **Patient Dashboard** | Displays wellness progress (e.g., steps taken, hours of sleep) and **Preventive Care Reminders** (e.g., "Upcoming: Annual blood test"). Includes a "simple health tip of the day." |
 | **3.** | Patient | **Goal Tracker for Patients** | Allows patients to log daily goals like steps or water intake. |
 | **4.** | Patient | **Profile Management** | Allows patients to view and edit their profile, including fields for basic health information (allergies, current medications). |
 | **5.** | Provider | **Healthcare Provider View** | Dashboard to view assigned patients and their **compliance status** (e.g., "Goal Met" or "Missed Preventive Checkup"). Patient list is **clickable** to see goals and compliance details. |
 | **6.** | Public / All | **Public Health Information Page** | Static page displaying general health information and the portal's privacy policy. |
-| **7.** | All | **Privacy & Security Measures** | Implement logging for user actions related to data access. Add a **consent checkbox** for data usage during registration. |
+| **7.** | All | **Privacy & Security Measures** | Logging for user actions related to data access. **Consent checkbox** for data usage during registration. |
 
 -----
 
