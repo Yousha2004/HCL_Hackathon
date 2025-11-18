@@ -3,6 +3,8 @@ import cors from "cors";
 import router from './routes';
 import { env } from './config/env';
 import { connectMongoose } from './models/mongoose';
+import { toNodeHandler } from 'better-auth/node';
+import { auth } from './lib/auth';
 
 const app = express();
 
@@ -12,9 +14,12 @@ app.use(cors({
     credentials: true,
 }))
 
+// Better Auth Handler
+app.all('/api/auth/*', toNodeHandler(auth));
+
 app.use(express.json());
 
-app.use(router);
+app.use('/api/v1', router);
 
 const startServer = async () => {
     try {
