@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
-import PatientProfile from "../models/patientProfile.js";
-import Goal from "../models/Goal.js";
-import DailyEntry from "../models/DailyEntry.js";
-import PreventiveReminder from "../models/Reminder.js";
+import PatientProfile from "../models/patientProfile";
+import Goal from "../models/Goal";
+import DailyEntry from "../models/DailyEntry";
+import PreventiveReminder from "../models/Reminder";
 
 
 const getUserId = (req: Request) => (req as any).user.id;

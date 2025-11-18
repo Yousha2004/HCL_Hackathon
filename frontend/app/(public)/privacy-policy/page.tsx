@@ -19,7 +19,7 @@ export default function PrivacyPolicyPage() {
         </p>
 
         <Button size="sm" className="rounded-lg">
-          <Link href="/login">Try HealMe</Link>
+          <Link href="/login">Try HealthHub</Link>
         </Button>
       </div>
     </div>
