@@ -2,7 +2,7 @@
 
 A secure, modern web portal designed to seamlessly integrate frontend and backend technologies to help patients achieve basic health goals and maintain compliance with critical preventive checkups. Built with security (HIPAA principles) and personalization as core priorities.
 
-## ✨ Project Highlights (5-Hour MVP Scope)
+## ✨ Project Highlights 
 
 This Minimum Viable Product (MVP) focuses on delivering a coherent, limited user experience that showcases core functionalities:
 
@@ -89,5 +89,3 @@ The architecture separates the frontend, backend, and data layers to ensure scal
     # Ensure API_BASE_URL is set in .env.local
     npm run dev
     ```
-
-The application will be accessible via the frontend URL (typically `http://localhost:3000`), connected to the backend API.
