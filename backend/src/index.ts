@@ -8,11 +8,11 @@ import { auth } from './lib/auth';
 
 const app = express();
 
-// app.use(cors({
-//     origin: env.ALLOWED_ORIGIN,// frontend URL
-//     methods: ["GET", "POST", "PUT", "DELETE"],
-//     credentials: true,
-// }))
+app.use(cors({
+    origin: env.ALLOWED_ORIGIN,// frontend URL
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+}))
 
 // Better Auth Handler
 app.all('/api/auth/{*any}', toNodeHandler(auth));
